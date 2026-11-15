@@ -1,5 +1,5 @@
-# Фиксированное имя проекта: том всегда называется grafinya-panel_grafinya_data,
-# даже если репозиторий склонирован в папку с другим именем.
+# Fixed project name: the volume is always grafinya-panel_grafinya_data,
+# even if the repository is cloned into a folder with a different name.
 name: grafinya-panel
 
 volumes:
@@ -12,11 +12,11 @@ services:
     #  - PORT=51821
     #  - HOST=0.0.0.0
     #  - INSECURE=false
-    #  - PUBLIC_HOST=vpn.example.com   # адрес для клиентов; по умолчанию определяется сам
-    #  - VPN_PORT=51820   # должен совпадать с портом в ports: ниже
-    #  - OVERRIDE_AUTO_AWG=wg   # выключить обфускацию Grafinya (режим без маскировки)
+    #  - PUBLIC_HOST=vpn.example.com   # address for clients; detected automatically by default
+    #  - VPN_PORT=51820   # must match the port in ports: below
+    #  - OVERRIDE_AUTO_AWG=wg   # disable Grafinya obfuscation (plain tunnel mode)
 
-    # Готового образа в реестре пока нет — собирается из этого репозитория.
+    # No prebuilt image in a registry yet: built from this repository.
     build: .
     image: grafinya-panel:latest
     container_name: grafinya
@@ -27,8 +27,8 @@ services:
     volumes:
       - grafinya_data:/etc/wireguard
       - /lib/modules:/lib/modules:ro
-    # Туннель в контейнере работает через /dev/net/tun, если в ядре сервера нет нужного модуля
-    # (так на большинстве VPS). Без этого устройства туннель не поднимется.
+    # The tunnel runs through /dev/net/tun when the server kernel lacks the module
+    # (true for most VPS). Without this device the tunnel will not start.
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:

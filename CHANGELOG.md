@@ -2,12 +2,12 @@
 
 ## 1.0.0 — 2026-11-15
 
-Первый публичный выпуск **Grafinya Panel**.
+First public release of **Grafinya Panel**.
 
-- Панель и VPN-нода Grafinya в одном Docker-контейнере.
-- Мастер первой настройки спрашивает только администратора: адрес сервера и порт
-  определяются автоматически (порт 51820/udp).
-- Обфускация трафика Grafinya включена по умолчанию.
-- Оформление «тетрадь в клетку», полный русский перевод.
-- Футер «by Grafinya», собственная документация, страница «Участники и лицензии».
-- `/dev/net/tun` в docker-compose по умолчанию, корректная проверка здоровья контейнера.
+- Panel and Grafinya VPN node in a single Docker container.
+- The first-run wizard only asks for the administrator account: the server address and
+  port are detected automatically (port 51820/udp).
+- Grafinya traffic obfuscation is enabled by default.
+- "Graph paper notebook" design with light and dark themes, English interface.
+- "by Grafinya" footer, our own documentation and a "Contributors & licenses" page.
+- `/dev/net/tun` in docker-compose by default and a correct container health check.

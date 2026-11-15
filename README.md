@@ -4,227 +4,228 @@
 
 # Grafinya Panel
 
-**Своя защищённая сеть на своём сервере — за одну команду.**<br/>
-Панель управления и VPN-нода Grafinya в одном контейнере. Без облаков, без посредников, без тарифов.
+**Your own secure network on your own server — in one command.**<br/>
+A management panel and Grafinya VPN node in a single container. No clouds, no middlemen, no plans.
 
-[![Версия](https://img.shields.io/badge/версия-1.0.0-7B61FF?style=flat-square)](CHANGELOG.md)
-[![Лицензия](https://img.shields.io/badge/лицензия-AGPL--3.0-2340B8?style=flat-square)](LICENSE)
-[![Docker](https://img.shields.io/badge/docker-compose-2340B8?style=flat-square&logo=docker&logoColor=white)](#-быстрый-старт)
+[![Version](https://img.shields.io/badge/version-1.0.0-7B61FF?style=flat-square)](CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-AGPL--3.0-2340B8?style=flat-square)](LICENSE)
+[![Docker](https://img.shields.io/badge/docker-compose-2340B8?style=flat-square&logo=docker&logoColor=white)](#-quick-start)
 
-[Быстрый старт](#-быстрый-старт) ·
-[Возможности](#-возможности) ·
-[Документация](#-документация) ·
-[Безопасность](#-безопасность) ·
-[Авторы](#-авторы)
+[Quick start](#-quick-start) ·
+[Features](#-features) ·
+[Documentation](#-documentation) ·
+[Security](#-security) ·
+[Authors](#-authors)
 
 <br/>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/clients-dark.png">
-  <img src="assets/clients-light.png" width="900" alt="Grafinya Panel — список клиентов">
+  <img src="assets/clients-light.png" width="900" alt="Grafinya Panel — clients list">
 </picture>
 
 </div>
 
 ---
 
-## ✦ Что это
+## ✦ What it is
 
-**Grafinya Panel** — self-host панель для собственного защищённого туннеля Grafinya.
-Берёте сервер, запускаете одну команду — и получаете веб-панель, в которой создаёте
-подключения для своих устройств: ноутбука, телефона, планшета, роутера. Каждое
-подключение — это файл `.conf` с ключами и параметрами туннеля.
+**Grafinya Panel** is a self-hosted panel for your own secure Grafinya tunnel.
+Take a server, run one command, and you get a web panel where you create connections
+for your devices: laptop, phone, tablet, router. Each connection is a `.conf` file with
+the keys and tunnel parameters.
 
-- 🔒 **Ваш сервер — ваши данные.** Панель и VPN-нода работают у вас: никаких внешних
-  аккаунтов и аналитики.
-- 🫥 **Трафик не похож на VPN.** Обфускация Grafinya включена по умолчанию —
-  соединение сложнее распознать и заблокировать.
-- ⚡ **Ноль настройки.** Мастер спрашивает только логин и пароль администратора — адрес
-  сервера и порт панель определяет сама.
+- 🔒 **Your server, your data.** The panel and the VPN node run on your machine: no
+  external accounts, no analytics.
+- 🫥 **Traffic doesn't look like a VPN.** Grafinya obfuscation is on by default, which
+  makes the connection harder to detect and block.
+- ⚡ **Zero configuration.** The wizard only asks for an admin username and password —
+  the panel detects the server address and port by itself.
 
-## ✦ Возможности
+## ✦ Features
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-**Подключения**
-- создание, редактирование, отключение, удаление
-- файл `.conf`, QR-код и одноразовая ссылка
-- срок действия и продление сменой даты
-- поиск, фильтры, массовые действия
+**Connections**
+- create, edit, disable, delete
+- `.conf` file, QR code and one-time link
+- expiration date, extended by changing the date
+- search, filters, bulk actions
 
 </td>
 <td width="50%" valign="top">
 
-**Сервер**
-- панель + VPN-нода в одном Docker-контейнере
-- обфускация Grafinya (Jc, Jmin/Jmax, S1–S4, H1–H4, I1–I5)
-- IPv4 и IPv6, межклиентский firewall
-- графики трафика, метрики Prometheus / JSON
+**Server**
+- panel + VPN node in one Docker container
+- Grafinya obfuscation (Jc, Jmin/Jmax, S1–S4, H1–H4, I1–I5)
+- IPv4 and IPv6, client-to-client firewall
+- traffic charts, Prometheus / JSON metrics
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-**Безопасность**
-- вход по паролю и двухфакторная аутентификация (TOTP)
-- вход через OAuth / OIDC
-- защищённые сессии и защита от CSRF
-- открытый исходный код
+**Security**
+- password sign-in and two-factor authentication (TOTP)
+- OAuth / OIDC sign-in
+- secure sessions and CSRF protection
+- open source
 
 </td>
 <td valign="top">
 
-**Удобство**
-- оформление «тетрадь в клетку», светлая и тёмная тема
-- интерфейс на русском и других языках
-- работает на небольшом VPS
-- обновление одной командой
+**Convenience**
+- "graph paper notebook" design, light and dark themes
+- runs on a small VPS
+- one-command updates
 
 </td>
 </tr>
 </table>
 
-## ✦ Скриншоты
+## ✦ Screenshots
 
 <table>
 <tr>
-<td width="50%"><img src="assets/login-light.png" alt="Вход — светлая тема"></td>
-<td width="50%"><img src="assets/login-dark.png" alt="Вход — тёмная тема"></td>
+<td width="50%"><img src="assets/login-light.png" alt="Sign in — light theme"></td>
+<td width="50%"><img src="assets/login-dark.png" alt="Sign in — dark theme"></td>
 </tr>
 <tr>
-<td align="center"><sub>Вход · светлая тема</sub></td>
-<td align="center"><sub>Вход · тёмная тема</sub></td>
+<td align="center"><sub>Sign in · light theme</sub></td>
+<td align="center"><sub>Sign in · dark theme</sub></td>
 </tr>
 <tr>
-<td><img src="assets/admin-light.png" alt="Сетевой интерфейс и обфускация"></td>
-<td><img src="assets/licenses-light.png" alt="Участники и лицензии"></td>
+<td><img src="assets/admin-light.png" alt="Network interface and obfuscation"></td>
+<td><img src="assets/licenses-light.png" alt="Contributors and licenses"></td>
 </tr>
 <tr>
-<td align="center"><sub>Сетевой интерфейс и обфускация</sub></td>
-<td align="center"><sub>Участники и лицензии</sub></td>
+<td align="center"><sub>Network interface and obfuscation</sub></td>
+<td align="center"><sub>Contributors &amp; licenses</sub></td>
 </tr>
 </table>
 
-## ✦ Быстрый старт
+## ✦ Quick start
 
-Нужен Linux-сервер (Ubuntu, Debian и т. п.) с публичным IPv4 и root-доступом.
+You need a Linux server (Ubuntu, Debian, etc.) with a public IPv4 address and root access.
 
 ```bash
 # 1. Docker
 curl -sSL https://get.docker.com | sh
 
-# 2. Панель
+# 2. Panel
 git clone https://github.com/grapelloid/grafinya-panel.git
 cd grafinya-panel
 
-# 3. Запуск (первая сборка — несколько минут: собирается VPN-ядро Grafinya)
+# 3. Start (the first build takes a few minutes: it compiles the Grafinya VPN core)
 docker compose up -d
 ```
 
-Откройте `https://<домен-или-IP>:51821` и создайте администратора — это единственный шаг.
-Адрес сервера панель определит сама (публичный IPv4 через `api.ipify.org` / `ifconfig.me` /
-`icanhazip.com`, иначе — адрес, по которому вы её открыли), VPN-порт — `51820/udp`.
-Дальше: «Новый клиент» → скачать `.conf` → открыть в приложении.
+Open `https://<domain-or-IP>:51821` and create the administrator — that's the only step.
+The panel detects the server address by itself (public IPv4 via `api.ipify.org` /
+`ifconfig.me` / `icanhazip.com`, otherwise the address you opened it at); the VPN port is
+`51820/udp`. Next: "New client" → download the `.conf` → import it into the app.
 
 > [!IMPORTANT]
-> Панель по умолчанию ждёт HTTPS. Поставьте перед ней [reverse proxy](#домен-и-https).
-> Чтобы временно зайти по `http://IP:51821`, раскомментируйте в `docker-compose.yml`
-> блок `environment:`, выставьте `INSECURE=true` и выполните `docker compose up -d` —
-> только для теста.
+> By default the panel expects HTTPS. Put a [reverse proxy](#domain-and-https) in front of it.
+> To sign in temporarily over `http://IP:51821`, uncomment the `environment:` block in
+> `docker-compose.yml`, set `INSECURE=true` and run `docker compose up -d` — for testing only.
 
-## ✦ Документация
+## ✦ Documentation
 
 <details open>
-<summary><b>Порты</b></summary>
+<summary><b>Ports</b></summary>
 
 <br/>
 
-| Порт        | Назначение                            |
-| ----------- | ------------------------------------- |
-| `51820/udp` | защищённый туннель Grafinya           |
-| `51821/tcp` | веб-панель (лучше спрятать за прокси) |
+| Port        | Purpose                              |
+| ----------- | ------------------------------------ |
+| `51820/udp` | secure Grafinya tunnel               |
+| `51821/tcp` | web panel (best kept behind a proxy) |
 
-Откройте их в firewall сервера (`ufw allow 51820/udp && ufw allow 51821/tcp`)
-и в панели облачного провайдера.
+Open them in the server firewall (`ufw allow 51820/udp && ufw allow 51821/tcp`)
+and in your cloud provider's security settings.
 
 </details>
 
 <details>
-<summary><b>Переменные окружения</b></summary>
+<summary><b>Environment variables</b></summary>
 
 <br/>
 
-Задаются в `docker-compose.yml`, блок `environment:`.
+Set them in `docker-compose.yml`, in the `environment:` block.
 
-| Переменная              | По умолчанию     | Что делает |
-| ----------------------- | ---------------- | ---------- |
-| `PORT`                  | `51821`          | порт веб-панели |
-| `INSECURE`              | `false`          | разрешить вход по HTTP без TLS (только для теста) |
-| `PUBLIC_HOST`           | авто             | домен или IP для клиентов вместо автоопределения |
-| `VPN_PORT`              | `51820`          | VPN-порт; меняйте вместе с портом в `ports:` |
-| `OVERRIDE_AUTO_AWG`     | —                | `wg` — выключить обфускацию (режим без маскировки) |
-| `DISABLE_IPV6`          | `false`          | отключить IPv6 |
-| `DISABLE_VERSION_CHECK` | `false`          | не проверять обновления на GitHub |
-| `DOCS_URL`              | этот README      | ссылка «Документация» в футере панели |
-| `SOURCE_URL`            | этот репозиторий | ссылка на исходный код на странице лицензий |
+| Variable                | Default         | What it does |
+| ----------------------- | --------------- | ------------ |
+| `PORT`                  | `51821`         | web panel port |
+| `INSECURE`              | `false`         | allow sign-in over HTTP without TLS (testing only) |
+| `PUBLIC_HOST`           | auto            | domain or IP for clients instead of auto-detection (applied on first setup) |
+| `VPN_PORT`              | `51820`         | VPN port; change it together with `ports:` |
+| `OVERRIDE_AUTO_AWG`     | —               | `wg` disables obfuscation (plain tunnel mode) |
+| `DISABLE_IPV6`          | `false`         | disable IPv6 |
+| `DISABLE_VERSION_CHECK` | `false`         | don't check GitHub for updates |
+| `TRUSTED_PROXIES`       | —               | reverse proxy addresses (IP/CIDR) whose `X-Forwarded-*` headers are trusted |
+| `DOCS_URL`              | this README     | "Documentation" link in the panel footer |
+| `SOURCE_URL`            | this repository | source code link on the licenses page |
 
-`HOST` — это адрес, на котором панель слушает внутри контейнера (`0.0.0.0`), а не
-публичный IP сервера: для публичного адреса используйте `PUBLIC_HOST`.
+`HOST` is the address the panel listens on inside the container (`0.0.0.0`), not the
+server's public IP: use `PUBLIC_HOST` for the public address.
 
 </details>
 
 <details>
-<summary><b>Домен и HTTPS</b></summary>
+<summary><b>Domain and HTTPS</b></summary>
 
 <br/>
 
-Направьте A-запись домена на IP сервера и поставьте перед панелью reverse proxy
-(Caddy, Traefik, nginx). Пример с [Caddy](https://caddyserver.com) — сертификат он получит сам:
+Point a domain's A record at the server IP and put a reverse proxy (Caddy, Traefik, nginx)
+in front of the panel. Example with [Caddy](https://caddyserver.com), which obtains the
+certificate automatically:
 
 ```caddyfile
-vpn.example.com {
+panel.example.com {
     reverse_proxy 127.0.0.1:51821
 }
 ```
 
-После этого закройте порт `51821` снаружи — останутся `51820/udp`, `80` и `443`.
+Then close port `51821` to the outside (publish it as `127.0.0.1:51821:51821/tcp`) — only
+`51820/udp`, `80` and `443` remain open.
 
 </details>
 
 <details>
-<summary><b>Подключения и файлы .conf</b></summary>
+<summary><b>Connections and .conf files</b></summary>
 
 <br/>
 
-1. «Новый клиент» → имя (например, «Телефон Ани») и, если нужно, срок действия.
-2. На карточке клиента — скачать `.conf`, показать QR-код или создать одноразовую ссылку.
-3. Передайте файл на устройство (AirDrop, «Файлы», почта) и добавьте его в приложении.
+1. "New client" → a name (for example, "Anna's phone") and, if needed, an expiration date.
+2. On the client card: download the `.conf`, show the QR code or create a one-time link.
+3. Transfer the file to the device (AirDrop, Files, e-mail) and import it into the app.
 
-Продлить доступ — сменить дату окончания. Приостановить — переключатель на карточке.
-Адрес и порт можно поменять в админке («Конфигурация» и «Сетевой интерфейс»).
+To extend access, change the expiration date. To pause it, use the toggle on the card.
+The address and port can be changed in the admin area ("Configuration" and "Interface").
 
 </details>
 
 <details>
-<summary><b>Обновление, резервная копия, восстановление</b></summary>
+<summary><b>Update, backup, restore</b></summary>
 
 <br/>
 
-База и ключи лежат в Docker-томе `grafinya-panel_grafinya_data` и переживают пересборку.
+The database and keys live in the `grafinya-panel_grafinya_data` Docker volume and survive rebuilds.
 
 ```bash
-# обновление
+# update
 git pull
 docker compose up -d --build
 
-# резервная копия
+# backup
 docker run --rm -v grafinya-panel_grafinya_data:/data -v "$PWD":/backup alpine \
   tar czf /backup/grafinya-backup.tgz -C /data .
 
-# восстановление
+# restore
 docker compose down
 docker run --rm -v grafinya-panel_grafinya_data:/data -v "$PWD":/backup alpine \
   sh -c "rm -rf /data/* && tar xzf /backup/grafinya-backup.tgz -C /data"
@@ -234,40 +235,40 @@ docker compose up -d
 </details>
 
 <details>
-<summary><b>Решение проблем</b></summary>
+<summary><b>Troubleshooting</b></summary>
 
 <br/>
 
-| Симптом | Что проверить |
+| Symptom | What to check |
 | ------- | ------------- |
-| Панель не открывается | `docker ps` — контейнер `grafinya` запущен? Порт `51821` открыт в firewall и у провайдера? |
-| Не пускает войти по `http://` | откройте по HTTPS или временно включите `INSECURE=true` |
-| Подключение есть, а сайты не грузятся | открыт ли `51820/udp`? совпадает ли `Endpoint` в `.conf` с адресом сервера? |
-| Контейнер `unhealthy` | `docker logs grafinya` — ошибки запуска туннеля |
-| Забыли пароль администратора | `docker exec -it grafinya cli db:admin:reset` |
+| The panel doesn't open | `docker ps` — is the `grafinya` container running? Is port `51821` open in the firewall and at the provider? |
+| Can't sign in over `http://` | use HTTPS or temporarily set `INSECURE=true` |
+| Connected, but websites don't load | is `51820/udp` open? Does `Endpoint` in the `.conf` match the server address? |
+| Container is `unhealthy` | `docker logs grafinya` — tunnel startup errors |
+| Forgot the admin password | `docker exec -it grafinya cli db:admin:reset` |
 
 </details>
 
-## ✦ Безопасность
+## ✦ Security
 
-- Включите HTTPS, придумайте сложный пароль и включите двухфакторную аутентификацию.
-- Спрячьте веб-порт `51821` за reverse proxy, наружу оставьте `51820/udp`.
-- Регулярно обновляйтесь: `git pull && docker compose up -d --build`.
-- Нашли уязвимость? Откройте [issue](https://github.com/grapelloid/grafinya-panel/issues)
-  с пометкой **security** без деталей эксплуатации — мы свяжемся с вами.
+- Use HTTPS, a strong password and two-factor authentication.
+- Keep the web port `51821` behind a reverse proxy; expose only `51820/udp`.
+- Update regularly: `git pull && docker compose up -d --build`.
+- Found a vulnerability? Open an [issue](https://github.com/grapelloid/grafinya-panel/issues)
+  labelled **security** without exploitation details, and we'll get in touch.
 
-## ✦ Разработка
+## ✦ Development
 
 ```bash
 cd src
 pnpm install
-pnpm dev                                      # dev-сервер
-pnpm lint && pnpm typecheck && pnpm test:unit # проверки перед коммитом
+pnpm dev                                      # dev server
+pnpm lint && pnpm typecheck && pnpm test:unit # checks before committing
 ```
 
-Как предложить изменения — в [contributing.md](contributing.md). История версий — в [CHANGELOG.md](CHANGELOG.md).
+How to propose changes: [contributing.md](contributing.md). Version history: [CHANGELOG.md](CHANGELOG.md).
 
-## ✦ Авторы
+## ✦ Authors
 
 <div align="center">
 
@@ -277,29 +278,29 @@ pnpm lint && pnpm typecheck && pnpm test:unit # проверки перед ко
 </div>
 
 <details>
-<summary><b>Участники и лицензии</b></summary>
+<summary><b>Contributors &amp; licenses</b></summary>
 
 <br/>
 
-Grafinya Panel построена на открытом коде этих проектов; их авторские права сохранены.
+Grafinya Panel is built on the open-source code of these projects; their copyrights are preserved.
 
 - [wg-easy](https://github.com/wg-easy/wg-easy) — © 2021–2026 Emile Nijssen & contributors · AGPL-3.0-only
 - [amneziawg-go](https://github.com/amnezia-vpn/amneziawg-go) — © 2017–2025 WireGuard LLC, Amnezia VPN · MIT
 - [amneziawg-tools](https://github.com/amnezia-vpn/amneziawg-tools) — Jason A. Donenfeld, Amnezia VPN · GPL-2.0
 - wireguard-go — © WireGuard LLC · MIT; wireguard-tools — © Jason A. Donenfeld · GPL-2.0
 - iptables / nftables · GPL-2.0
-- Node.js, Nuxt, Vue — © их авторы · MIT
+- Node.js, Nuxt, Vue — © their authors · MIT
 
-В самой панели этот список открывается по ссылке «Участники и лицензии» в футере.
+Inside the panel this list opens from the "Contributors & licenses" link in the footer.
 
 "WireGuard" and the "WireGuard" logo are registered trademarks of Jason A. Donenfeld.
-Grafinya — независимый проект и не связан с авторами перечисленных проектов.
+Grafinya is an independent project and is not affiliated with the authors of the projects above.
 
 </details>
 
-## ✦ Лицензия
+## ✦ License
 
-[GNU AGPL-3.0-only](LICENSE). Grafinya Panel основана на [wg-easy](https://github.com/wg-easy/wg-easy)
-(AGPL-3.0); изменения Grafinya распространяются на тех же условиях. Если вы запускаете
-изменённую версию как сервис, AGPL требует дать пользователям её исходный код — ссылка
-на него уже есть на странице «Участники и лицензии».
+[GNU AGPL-3.0-only](LICENSE). Grafinya Panel is based on [wg-easy](https://github.com/wg-easy/wg-easy)
+(AGPL-3.0); Grafinya's changes are distributed under the same terms. If you run a modified
+version as a service, the AGPL requires you to offer its source code to users — the link
+is already on the "Contributors & licenses" page.

@@ -11,7 +11,6 @@
     >
       <HeaderLogo />
       <div class="ml-auto flex items-center gap-2">
-        <HeaderLangSelector />
         <HeaderThemeSwitch />
         <HeaderChartToggle v-if="loggedIn" />
         <UiUserMenu v-if="loggedIn" />

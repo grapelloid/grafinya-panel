@@ -32,18 +32,18 @@
 }
 
 :root {
-  /* Grafinya — «тетрадь в клетку» */
+  /* Grafinya: "graph paper notebook" theme */
   color-scheme: light;
-  --background: #fcfcf8; /* бумага */
+  --background: #fcfcf8; /* paper */
   --surface: #fffffc;
   --surface-raised: #f1f3fb;
   --surface-hover: #e6eaf8;
-  --foreground: #16215a; /* тёмные чернила */
-  --muted: #2340b8; /* синие чернила */
+  --foreground: #16215a; /* dark ink */
+  --muted: #2340b8; /* blue ink */
   --subtle: #5868a6;
   --line: #d3daf0;
   --input: #fefefb;
-  --accent: #7b61ff; /* фиолетовый акцент */
+  --accent: #7b61ff; /* violet accent */
   --accent-hover: #6247f0;
   --danger: #d43c3c;
   --success: #1f7a4d;
@@ -81,7 +81,7 @@
     background-size: 20px 20px;
     background-attachment: fixed;
   }
-  /* красное поле справа, как в школьной тетради */
+  /* red margin line on the right, like in a school notebook */
   body::after {
     content: '';
     position: fixed;

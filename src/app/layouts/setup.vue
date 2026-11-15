@@ -5,7 +5,6 @@
     >
       <HeaderLogo />
       <div class="flex items-center gap-2">
-        <HeaderLangSelector />
         <HeaderThemeSwitch />
       </div>
     </header>
