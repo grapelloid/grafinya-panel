@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "docker compose -f docker-compose.dev.yml up grafinya --build --watch",
+    "cli:dev": "docker compose -f docker-compose.dev.yml run --build --rm -it grafinya cli:dev",
+    "build": "docker build -t grafinya-panel .",
+    "scripts:version": "bash scripts/version.sh",
+    "scripts:i18n": "bash scripts/i18n.sh"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  },
+  "packageManager": "pnpm@12.18.0"
+}

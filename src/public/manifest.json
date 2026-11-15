@@ -1,0 +1,11 @@
+{
+  "name": "Grafinya",
+  "display": "standalone",
+  "background_color": "#FCFCF8",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "type": "image/png"
+    }
+  ]
+}
