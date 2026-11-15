@@ -10,8 +10,6 @@
 [![Версия](https://img.shields.io/badge/версия-1.0.0-7B61FF?style=flat-square)](CHANGELOG.md)
 [![Лицензия](https://img.shields.io/badge/лицензия-AGPL--3.0-2340B8?style=flat-square)](LICENSE)
 [![Docker](https://img.shields.io/badge/docker-compose-2340B8?style=flat-square&logo=docker&logoColor=white)](#-быстрый-старт)
-[![CI](https://img.shields.io/github/actions/workflow/status/grapelloid/grafinya-panel/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/grapelloid/grafinya-panel/actions)
-[![iOS](https://img.shields.io/badge/клиент-iOS-111?style=flat-square&logo=apple&logoColor=white)](#-клиент-для-iphone)
 
 [Быстрый старт](#-быстрый-старт) ·
 [Возможности](#-возможности) ·
@@ -35,8 +33,7 @@
 **Grafinya Panel** — self-host панель для собственного защищённого туннеля Grafinya.
 Берёте сервер, запускаете одну команду — и получаете веб-панель, в которой создаёте
 подключения для своих устройств: ноутбука, телефона, планшета, роутера. Каждое
-подключение — это файл `.conf`, который открывается в приложении
-[grafinya для iPhone](#-клиент-для-iphone).
+подключение — это файл `.conf` с ключами и параметрами туннеля.
 
 - 🔒 **Ваш сервер — ваши данные.** Панель и VPN-нода работают у вас: никаких внешних
   аккаунтов и аналитики.
@@ -251,12 +248,6 @@ docker compose up -d
 
 </details>
 
-## ✦ Клиент для iPhone
-
-**grafinya** — iOS-приложение для подключения к своей панели. Нажмите «Выбрать файл»,
-укажите `.conf` из панели — и включайте. Флаг страны сервера определяется сам, а
-Kill Switch не выпустит трафик мимо туннеля, если соединение оборвётся.
-
 ## ✦ Безопасность
 
 - Включите HTTPS, придумайте сложный пароль и включите двухфакторную аутентификацию.
@@ -271,7 +262,7 @@ Kill Switch не выпустит трафик мимо туннеля, если
 cd src
 pnpm install
 pnpm dev                                      # dev-сервер
-pnpm lint && pnpm typecheck && pnpm test:unit # проверки, как в CI
+pnpm lint && pnpm typecheck && pnpm test:unit # проверки перед коммитом
 ```
 
 Как предложить изменения — в [contributing.md](contributing.md). История версий — в [CHANGELOG.md](CHANGELOG.md).
